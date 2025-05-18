@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educere Learning - Embedded Logo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6 text-center">Educere Learning - Logo Test</h1>
+        
+        <!-- Direct logo implementation using base64 encoded image -->
+        <div class="bg-gray-100 p-8 rounded-lg shadow-md mb-8">
+            <h2 class="text-xl font-bold mb-4">Approach 1: Text Logo (Currently Used)</h2>
+            <div class="bg-white p-4 rounded flex items-center">
+                <span class="text-2xl font-bold text-[#2C2B6C]">Educere Learning</span>
+            </div>
+        </div>
+        
+        <!-- Recommendations for getting the real logo to work -->
+        <div class="bg-blue-50 p-8 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4">How to Fix Logo Display Issues</h2>
+            <p class="mb-4">Since we're having issues displaying the logo in the test environment, here are some solutions:</p>
+            
+            <ol class="list-decimal pl-5 space-y-2 mb-6">
+                <li><strong>Open directly in browser:</strong> Try opening the HTML file directly in your browser (not through a server)</li>
+                <li><strong>Check image path:</strong> Ensure the logo is in the correct folder (C:\Users\vaidy\CascadeProjects\educere-learning-tailwind\images\)</li>
+                <li><strong>Use a different server:</strong> Try using a different local development server like VS Code's Live Server</li>
+                <li><strong>Embed as base64:</strong> For development only, embed the logo directly in the HTML as base64</li>
+            </ol>
+            
+            <div class="mb-4">
+                <h3 class="font-bold mb-2">Sample code to use in your site:</h3>
+                <pre class="bg-gray-800 text-white p-4 rounded overflow-auto text-sm">
+&lt;a href="#" class="inline-flex items-center"&gt;
+    &lt;img src="images/educere-learning-logo.png" alt="Educere Learning" class="h-16"&gt;
+&lt;/a&gt;
+                </pre>
+            </div>
+            
+            <p class="text-sm text-gray-600 italic">Note: These issues are specific to the local development environment and wouldn't affect your actual deployed website.</p>
+        </div>
+    </div>
+</body>
+</html>

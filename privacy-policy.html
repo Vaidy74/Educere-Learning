@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Educere Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="tailwind.css">
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-float-tooltip {
+            position: absolute;
+            right: 70px;
+            background-color: #fff;
+            color: #333;
+            border-radius: 5px;
+            padding: 5px 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            font-size: 13px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float:hover .whatsapp-float-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-light">
+    <!-- Header with Navigation -->
+    <header class="bg-white py-4 shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="modern-design.html" class="flex items-center">
+                    <img src="images/educere-learning-logo.svg" alt="Educere Learning" class="h-20 -my-2">
+                    <span class="ml-3 text-2xl font-bold text-primary font-display">Educere Learning</span>
+                </a>
+                
+                <nav class="hidden md:flex gap-x-6">
+                    <a href="modern-design.html#about" class="font-medium text-secondary hover:text-primary transition-standard">About</a>
+                    <a href="modern-design.html#services" class="font-medium text-secondary hover:text-primary transition-standard">Services</a>
+                    <a href="modern-design.html#testimonials" class="font-medium text-secondary hover:text-primary transition-standard">Testimonials</a>
+                    <a href="modern-design.html#faq" class="font-medium text-secondary hover:text-primary transition-standard">FAQ</a>
+                    <a href="modern-design.html#contact" class="font-medium text-secondary hover:text-primary transition-standard">Contact</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-primary focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile menu (hidden by default) -->
+            <div class="md:hidden hidden mt-4 pb-4" id="mobile-menu">
+                <div class="flex flex-col space-y-4">
+                    <a href="modern-design.html#about" class="font-medium text-secondary hover:text-primary transition-standard">About</a>
+                    <a href="modern-design.html#services" class="font-medium text-secondary hover:text-primary transition-standard">Services</a>
+                    <a href="modern-design.html#testimonials" class="font-medium text-secondary hover:text-primary transition-standard">Testimonials</a>
+                    <a href="modern-design.html#faq" class="font-medium text-secondary hover:text-primary transition-standard">FAQ</a>
+                    <a href="modern-design.html#contact" class="font-medium text-secondary hover:text-primary transition-standard">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md">
+                <h1 class="text-3xl md:text-4xl font-bold text-primary font-display mb-8">Privacy Policy</h1>
+                
+                <div class="space-y-8">
+                    <section>
+                        <h2 class="text-2xl font-bold text-primary mb-4">Introduction</h2>
+                        <p class="mb-3">Last Updated: May 18, 2025</p>
+                        <p class="mb-3">
+                            Educere Learning ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our tutoring services.
+                        </p>
+                        <p>
+                            Please read this policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site or use our services.
+                        </p>
+                    </section>
+                    
+                    <section>
+                        <h2 class="text-2xl font-bold text-primary mb-4">Information We Collect</h2>
+                        <p class="mb-3">We may collect information about you in various ways:</p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li><strong>Personal Data:</strong> Personally identifiable information, such as your name, email address, telephone number, and other information you provide when you contact us through our website forms or register for our services.</li>
+                            <li><strong>Child Data:</strong> Information about your child(ren) such as their name, age, school year, academic strengths, and areas for improvement.</li>
+                            <li><strong>Usage Data:</strong> Information about how you access and use our website, including your IP address, browser type, and the pages you visit.</li>
+                            <li><strong>Cookies:</strong> Our website may use "cookies" to enhance user experience. You can choose to disable cookies through your browser settings.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2 class="text-2xl font-bold text-primary mb-4">How We Use Your Information</h2>
+                        <p class="mb-3">We may use the information we collect for various purposes:</p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>To provide and maintain our services</li>
+                            <li>To notify you about changes to our services</li>
+                            <li>To provide customer support</li>
+                            <li>To gather analysis or valuable information so that we can improve our services</li>
+                            <li>To tailor educational content to your child's needs</li>
+                            <li>To communicate with you about our services</li>
+                            <li>To monitor the usage of our services</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2 class="text-2xl font-bold text-primary mb-4">Legal Basis for Processing (EU/UK Users)</h2>
+                        <p class="mb-3">Under the General Data Protection Regulation (GDPR), we process your personal data on the following legal bases:</p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li><strong>Contract:</strong> Processing necessary for the performance of a contract to which you are a party.</li>
+                            <li><strong>Legitimate Interests:</strong> Processing necessary for our legitimate interests, provided those interests aren't overridden by your rights.</li>
+                            <li><strong>Consent:</strong> Where you have given consent for specific processing activities.</li>
+                            <li><strong>Legal Obligation:</strong> Processing necessary for compliance with legal obligations.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2 class="text-2xl font-bold text-primary mb-4">Data Retention</h2>
+                        <p>
+                            We will retain your personal data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your data to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.
+                        </p>
+                    </section>
+                    
+                    <section>
+                        <h2 class="text-2xl font-bold text-primary mb-4">Your Data Protection Rights</h2>
+                        <p class="mb-3">Under data protection laws, you have rights including:</p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li><strong>Right to Access:</strong> The right to request copies of your personal data.</li>
+                            <li><strong>Right to Rectification:</strong> The right to request that we correct inaccurate information about you.</li>
+                            <li><strong>Right to Erasure:</strong> The right to request that we delete your personal data in certain circumstances.</li>
+                            <li><strong>Right to Restrict Processing:</strong> The right to request that we restrict the processing of your data in certain circumstances.</li>
+                            <li><strong>Right to Data Portability:</strong> The right to request that we transfer your data to another organization or directly to you.</li>
+                            <li><strong>Right to Object:</strong> The right to object to processing of your personal data in certain circumstances.</li>
+                        </ul>
+                        <p class="mt-3">
+                            If you wish to exercise any of these rights, please contact us at info@educerelearning.co.uk.
+                        </p>
+                    </section>
+                    
+                    <section>
+                        <h2 class="text-2xl font-bold text-primary mb-4">Children's Privacy</h2>
+                        <p>
+                            Our services are primarily directed at parents and guardians of children. We do not knowingly collect personally identifiable information from children under 13 without verifiable parental consent. If you believe we have collected personal information from a child under 13 without appropriate consent, please contact us immediately.
+                        </p>
+                    </section>
+                    
+                    <section>
+                        <h2 class="text-2xl font-bold text-primary mb-4">Changes to This Privacy Policy</h2>
+                        <p>
+                            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.
+                        </p>
+                    </section>
+                    
+                    <section>
+                        <h2 class="text-2xl font-bold text-primary mb-4">Contact Us</h2>
+                        <p>
+                            If you have any questions about this Privacy Policy, please contact us:<br>
+                            Email: info@educerelearning.co.uk<br>
+                            WhatsApp: +44 7405 795320
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">Educere Learning</h3>
+                    <p class="mb-4 opacity-90">Personalized tutoring for primary school children following the UK National Curriculum.</p>
+                    <div class="flex items-center space-x-1 opacity-90">
+                        <i class="fas fa-map-marker-alt text-accent mr-2"></i>
+                        <span>Langley, Berkshire, UK</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="modern-design.html#about" class="opacity-90 hover:opacity-100 hover:text-accent transition-standard">About Us</a></li>
+                        <li><a href="modern-design.html#services" class="opacity-90 hover:opacity-100 hover:text-accent transition-standard">Services</a></li>
+                        <li><a href="modern-design.html#testimonials" class="opacity-90 hover:opacity-100 hover:text-accent transition-standard">Testimonials</a></li>
+                        <li><a href="modern-design.html#faq" class="opacity-90 hover:opacity-100 hover:text-accent transition-standard">FAQ</a></li>
+                        <li><a href="privacy-policy.html" class="opacity-90 hover:opacity-100 hover:text-accent transition-standard">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">Connect With Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-white hover:text-accent transition-standard text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition-standard text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition-standard text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition-standard text-2xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <a href="contact.html" class="inline-flex items-center text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-primary transition-standard">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 mt-8 pt-8 text-center opacity-90">
+                <p>&copy; 2025 Educere Learning. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // If mobile menu is open, close it
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+    
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/447405795320?text=Hi%2C%20I'm%20interested%20in%20tutoring%20services%20for%20my%20child." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-float-tooltip">Chat with us</span>
+    </a>
+</body>
+</html>

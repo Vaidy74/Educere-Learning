@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<!-- Updated Version: 2025-05-18 02:24:00 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Educere Learning - Personalized tutoring for primary school children in the UK, specializing in English, Maths, Science, and phonics.">
+    <meta name="keywords" content="tutoring, private tutoring, UK education, primary school, phonics, English, Maths, Science, SATs preparation">
+    
+    <title>Educere Learning | Personalized Tutoring for Primary Children</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="tailwind.css">
+    
+    <style>
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-float-tooltip {
+            position: absolute;
+            right: 70px;
+            background-color: #fff;
+            color: #333;
+            border-radius: 5px;
+            padding: 5px 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            font-size: 13px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float:hover .whatsapp-float-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        
+        @media screen and (max-width: 767px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C2B6C',    /* Educere Blue */
+                        secondary: '#FF5E57',  /* Warm Coral */
+                        accent: '#FFD166',     /* Sunshine Yellow */
+                        light: '#F9F5EC',      /* Soft Cream */
+                        neutral: '#D1D5DB',    /* Cool Gray */
+                        dark: '#333333',       /* Charcoal */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Import Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Arvo:wght@400;700&display=swap">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Schema.org markup for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Educere Learning",
+      "description": "Personalized tutoring for primary school children in the UK, aged 5-11, in subjects such as English, Maths, Science, and early reading and phonics.",
+      "url": "https://www.educerelearning.com",
+      "sameAs": [
+        "https://www.facebook.com/educerelearning/",
+        "https://www.instagram.com/educerelearning/"
+      ]
+    }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Subtle transition effect */
+        .transition-standard {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-dark bg-white">
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-white shadow-lg p-4 z-50 hidden">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div>
+                    <p class="mb-1"><strong>We use cookies</strong></p>
+                    <p class="text-sm text-dark/70">We use cookies to improve your experience on our website. By continuing to browse, you consent to our use of cookies as described in our <a href="privacy-policy.html" class="text-primary underline">Privacy Policy</a>.</p>
+                </div>
+                <div class="flex gap-2">
+                    <button id="cookie-accept" class="bg-primary text-white px-4 py-2 rounded hover:bg-primary/80 transition-standard">Accept</button>
+                    <button id="cookie-decline" class="bg-gray-200 text-dark px-4 py-2 rounded hover:bg-gray-300 transition-standard">Decline</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header - Clean and modern with shadow -->
+    <header class="fixed w-full z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center space-x-3">
+                    <img src="images/educere-learning-logo.svg" alt="Educere Learning" class="h-20 -my-2">
+                    <span class="font-bold text-primary text-3xl" style="font-family: 'Arvo', serif;">Educere Learning</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-dark hover:text-primary transition-standard" aria-label="Go to Home">Home</a>
+                    <a href="#about" class="text-dark hover:text-primary transition-standard" aria-label="Go to About">About</a>
+                    <a href="#services" class="text-dark hover:text-primary transition-standard" aria-label="Go to Services">Services</a>
+                    <a href="#google-reviews" class="text-dark hover:text-primary transition-standard" aria-label="Go to Testimonials">Testimonials</a>
+                    <a href="#faq" class="text-dark hover:text-primary transition-standard" aria-label="Go to FAQs">FAQs</a>
+                    <a href="#contact" class="px-6 py-2 bg-primary text-white rounded-full hover:bg-secondary transition-standard" aria-label="Contact Us">Contact Us</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="hidden md:hidden py-4 mt-2" aria-labelledby="mobile-menu-button">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-dark hover:text-primary transition-standard" aria-label="Go to Home">Home</a>
+                    <a href="#about" class="text-dark hover:text-primary transition-standard" aria-label="Go to About">About</a>
+                    <a href="#services" class="text-dark hover:text-primary transition-standard" aria-label="Go to Services">Services</a>
+                    <a href="#google-reviews" class="text-dark hover:text-primary transition-standard" aria-label="Go to Testimonials">Testimonials</a>
+                    <a href="#faq" class="text-dark hover:text-primary transition-standard" aria-label="Go to FAQs">FAQs</a>
+                    <a href="#contact" class="px-6 py-2 bg-primary text-white text-center rounded-full hover:bg-secondary transition-standard" aria-label="Contact Us">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section - Modern and clean -->
+    <section id="home" class="pt-32 pb-20 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 space-y-6">
+                    <h1 class="text-4xl md:text-5xl font-bold font-display leading-tight">
+                        Unlock Your Child's Potential
+                    </h1>
+                    <p class="text-lg md:text-xl opacity-90">
+                        Personalized tutoring for primary school children in the UK, aged 5-11, in subjects such as English, Maths, Science, and early reading and phonics.
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <a href="#contact" class="inline-block px-8 py-3 bg-accent text-primary font-bold rounded-full hover:bg-white transition-standard">
+                            Book Your Free Consultation
+                        </a>
+                        <a href="#services" class="inline-block px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-primary font-bold rounded-full transition-standard">
+                            Explore Services
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="rounded-xl overflow-hidden shadow-2xl">
+                        <!-- Using your custom image from the images folder -->
+                        <img src="images/Happy-Learning.jpg" alt="Happy children learning" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-accent"></div>
+                    <div class="absolute -top-6 -left-6 w-16 h-16 rounded-full bg-secondary"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Credentials Strip -->
+
+
+    <section class="py-6 bg-accent">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-center gap-12 max-w-4xl mx-auto">
+                <!-- 10 Years Logo -->
+                <div class="flex items-center">
+                    <div class="h-16 w-auto mr-4">
+                        <img src="images/Credential-1.png" alt="10 Years Experience" class="h-full w-auto object-contain">
+                    </div>
+                    <span class="text-base font-bold text-primary">Experience</span>
+                </div>
+                
+                <!-- Accreditation Logo -->
+                <div class="flex items-center">
+                    <div class="h-16 w-auto mr-4">
+                        <img src="images/Credential-2.png" alt="Official Accreditation" class="h-full w-auto object-contain">
+                    </div>
+                    <span class="text-base font-bold text-primary">Accredited</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Propositions - Visual cards -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary font-display mb-4">Why Choose Us?</h2>
+                <p class="text-lg text-dark/80 max-w-2xl mx-auto">
+                    Our approach to education is built on these core principles
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-standard">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-user-graduate text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Personalized, Child-Centred Coaching</h3>
+                    <p class="text-dark/80">
+                        Tailored 1:1 and small-group lessons that adapt to each child's learning style, interests, and pace—making every session engaging and effective.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-standard">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-certificate text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Expertise You Can Trust</h3>
+                    <p class="text-dark/80">
+                        Founded by an ex-banker and passionate educationist with around 10 years of success.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-standard">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-smile-beam text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Fun, Empathetic Learning Environment</h3>
+                    <p class="text-dark/80">
+                        Lessons built around what children want to learn, fostering confidence, ownership, and a genuine love of learning.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Clean and modern -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary font-display mb-6 text-center">About Us</h2>
+            </div>
+            
+            <div class="mb-12">
+                <!-- Mission & Story (Full Width) -->
+                <div class="space-y-6 max-w-4xl mx-auto">
+                    <div class="bg-light p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-primary font-display mb-3">Our Mission</h3>
+                        <p class="text-dark/80">
+                            "Our mission is to spark curiosity and unlock every child's potential. We build a strong foundation for future success, amplify school learning, and make tutoring services accessible to all."
+                        </p>
+                    </div>
+                    
+                    <div class="bg-light p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-primary font-display mb-3">Founder's Journey</h3>
+                        <p class="text-dark/80">
+                            Driven by a passion for education and nine years of hands-on experience, our founder is an ex-banker turned educationist, primary-school governor, and event manager. As a mother of two, she combines professional expertise with heartfelt empathy to create engaging, child-centred tutoring that truly makes a difference.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - Clean grid layout -->
+    <section id="services" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary font-display mb-4">Our Services</h2>
+                <p class="text-lg text-dark/80 max-w-2xl mx-auto">
+                    Comprehensive tutoring services for primary school children following the UK National Curriculum
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard">
+                    <div class="w-14 h-14 bg-primary text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-book-open text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2 font-display">Phonics</h3>
+                    <p class="text-secondary font-medium">Reception & Year 1</p>
+                    <div class="mt-3 text-sm text-dark/70">
+                        Building essential early reading skills through structured, fun phonics sessions.
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard">
+                    <div class="w-14 h-14 bg-primary text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-pencil-alt text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2 font-display">English</h3>
+                    <p class="text-secondary font-medium">Reception, KS1 & KS2</p>
+                    <div class="mt-3 text-sm text-dark/70">
+                        Developing reading comprehension, writing skills, and language proficiency.
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard">
+                    <div class="w-14 h-14 bg-primary text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-calculator text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2 font-display">Mathematics</h3>
+                    <p class="text-secondary font-medium">Reception, KS1 & KS2</p>
+                    <div class="mt-3 text-sm text-dark/70">
+                        Building number sense, problem-solving skills, and mathematical confidence.
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard">
+                    <div class="w-14 h-14 bg-primary text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-flask text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2 font-display">Science</h3>
+                    <p class="text-secondary font-medium">Reception, KS1 & KS2</p>
+                    <div class="mt-3 text-sm text-dark/70">
+                        Exploring scientific concepts through engaging, hands-on activities.
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard">
+                    <div class="w-14 h-14 bg-primary text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-comments text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2 font-display">Speech & Language</h3>
+                    <p class="text-secondary font-medium">Ages 5–11</p>
+                    <div class="mt-3 text-sm text-dark/70">
+                        Specialized support to develop communication skills and boost confidence.
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard">
+                    <div class="w-14 h-14 bg-primary text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-award text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2 font-display">11+ Support</h3>
+                    <p class="text-secondary font-medium">Maths & English</p>
+                    <div class="mt-3 text-sm text-dark/70">
+                        Targeted preparation for 11+ exams with tailored practice and strategies.
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard">
+                    <div class="w-14 h-14 bg-primary text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-edit text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2 font-display">SATs - Year 2</h3>
+                    <p class="text-secondary font-medium">Key Stage 1</p>
+                    <div class="mt-3 text-sm text-dark/70">
+                        Focused preparation with confidence-building strategies and practice.
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard">
+                    <div class="w-14 h-14 bg-primary text-white rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2 font-display">SATs - Year 6</h3>
+                    <p class="text-secondary font-medium">Key Stage 2</p>
+                    <div class="mt-3 text-sm text-dark/70">
+                        Comprehensive preparation with exam techniques and targeted practice.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="google-reviews" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary font-display mb-4">What Parents Say</h2>
+                <p class="text-lg text-dark/80 max-w-2xl mx-auto">
+                    See what our families are saying about us on Google
+                </p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto bg-light p-6 rounded-xl shadow-md">
+                <!-- Elfsight Testimonials Widget -->
+                <script src="https://static.elfsight.com/platform/platform.js" async></script>
+                <div class="elfsight-app-b379d319-ec4d-42cd-a8e2-479eca303f9c" data-elfsight-app-lazy></div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="https://g.co/kgs/cUZJFv" class="text-primary hover:text-secondary transition-standard inline-flex items-center" target="_blank" rel="noopener" aria-label="See all our reviews on Google">
+                    <span>See all our reviews on Google</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section - Clean and organized -->
+    <section id="faq" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary font-display mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-dark/80 max-w-3xl mx-auto">
+                    Find answers to common questions about our tutoring services.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-3">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+                    <button class="w-full text-left p-5 flex justify-between items-center faq-toggle">
+                        <h3 class="text-lg font-bold text-primary">1. What subjects do you tutor?</h3>
+                        <svg class="w-5 h-5 text-primary transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 faq-content hidden">
+                        <p class="text-dark/80">
+                            We offer tutoring in core primary subjects including English, Maths, Science, and early reading and phonics. We also provide support for SATs (Year 2 and Year6) and 11+ personalised support in Maths and English.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+                    <button class="w-full text-left p-5 flex justify-between items-center faq-toggle">
+                        <h3 class="text-lg font-bold text-primary">2. What age groups do you tutor?</h3>
+                        <svg class="w-5 h-5 text-primary transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 faq-content hidden">
+                        <p class="text-dark/80">
+                            We support children from Reception through Year 6 (ages 4–11).
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+                    <button class="w-full text-left p-5 flex justify-between items-center faq-toggle">
+                        <h3 class="text-lg font-bold text-primary">3. Are your tutors qualified?</h3>
+                        <svg class="w-5 h-5 text-primary transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 faq-content hidden">
+                        <p class="text-dark/80">
+                            Yes, all tutors are qualified professionals with experience in primary education.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+                    <button class="w-full text-left p-5 flex justify-between items-center faq-toggle">
+                        <h3 class="text-lg font-bold text-primary">4. How are lessons delivered?</h3>
+                        <svg class="w-5 h-5 text-primary transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 faq-content hidden">
+                        <p class="text-dark/80">
+                            Lessons can be delivered in-person or online, depending on your preference and location.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+                    <button class="w-full text-left p-5 flex justify-between items-center faq-toggle">
+                        <h3 class="text-lg font-bold text-primary">5. How long are the tutoring sessions?</h3>
+                        <svg class="w-5 h-5 text-primary transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 faq-content hidden">
+                        <p class="text-dark/80">
+                            Standard sessions are 60 minutes, but we offer longer hours depending on the needs of the student.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+                    <button class="w-full text-left p-5 flex justify-between items-center faq-toggle">
+                        <h3 class="text-lg font-bold text-primary">6. How do you tailor sessions to my child's needs?</h3>
+                        <svg class="w-5 h-5 text-primary transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 faq-content hidden">
+                        <p class="text-dark/80">
+                            We start with an initial assessment to understand your child's strengths and areas for development, then create a personalized learning plan.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 7 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+                    <button class="w-full text-left p-5 flex justify-between items-center faq-toggle">
+                        <h3 class="text-lg font-bold text-primary">7. Do you provide progress reports?</h3>
+                        <svg class="w-5 h-5 text-primary transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 faq-content hidden">
+                        <p class="text-dark/80">
+                            Yes, we provide regular updates and reports so you can track your child's improvement if requested.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 8 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+                    <button class="w-full text-left p-5 flex justify-between items-center faq-toggle">
+                        <h3 class="text-lg font-bold text-primary">8. How do I book a session?</h3>
+                        <svg class="w-5 h-5 text-primary transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 faq-content hidden">
+                        <p class="text-dark/80">
+                            You can book via email or phone. We also offer a free consultation for 15mts to discuss your child's needs.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 9 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+                    <button class="w-full text-left p-5 flex justify-between items-center faq-toggle">
+                        <h3 class="text-lg font-bold text-primary">9. What are your fees?</h3>
+                        <svg class="w-5 h-5 text-primary transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 faq-content hidden">
+                        <p class="text-dark/80">
+                            Fees vary based on session length, subject, and format (online/in-person). Please contact us for a detailed price list.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 10 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+                    <button class="w-full text-left p-5 flex justify-between items-center faq-toggle">
+                        <h3 class="text-lg font-bold text-primary">10. Can tutoring help with confidence as well as academics?</h3>
+                        <svg class="w-5 h-5 text-primary transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="px-5 pb-5 faq-content hidden">
+                        <p class="text-dark/80">
+                            Totally. One of our main goals is to build confidence and a love of learning, alongside improving academic skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section - Bold and clear -->
+    <section id="contact" class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-display mb-6">Ready to Get Started?</h2>
+                <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+                    Contact us today and take the first step toward unlocking your child's potential.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="https://wa.me/447405795320?text=Hi%2C%20I'm%20interested%20in%20tutoring%20services%20for%20my%20child." target="_blank" class="inline-flex items-center px-8 py-4 bg-[#25d366] text-white font-bold text-lg rounded-full hover:bg-[#128C7E] transition-standard">
+                        <i class="fab fa-whatsapp mr-2 text-xl"></i> Contact us on WhatsApp
+                    </a>
+                    <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-white text-primary font-bold text-lg rounded-full hover:bg-accent hover:text-primary transition-standard">
+                        <i class="fas fa-envelope mr-2 text-xl"></i> Contact us over email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Clean and informative -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">Educere Learning</h3>
+                    <p class="text-white/70">
+                        Personalized tutoring for primary school children in the UK, aged 5-11.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-accent font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-white/70 hover:text-white hover:underline transition-standard">Home</a></li>
+                        <li><a href="#about" class="text-white/70 hover:text-white hover:underline transition-standard">About Us</a></li>
+                        <li><a href="#services" class="text-white/70 hover:text-white hover:underline transition-standard">Services</a></li>
+                        <li><a href="#testimonials" class="text-white/70 hover:text-white hover:underline transition-standard">Testimonials</a></li>
+                        <li><a href="#contact" class="text-white/70 hover:text-white hover:underline transition-standard">Contact</a></li>
+                        <li><a href="privacy-policy.html" class="text-white/70 hover:text-white hover:underline transition-standard">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-accent font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-white/70 hover:text-white hover:underline transition-standard">Phonics</a></li>
+                        <li><a href="#services" class="text-white/70 hover:text-white hover:underline transition-standard">English</a></li>
+                        <li><a href="#services" class="text-white/70 hover:text-white hover:underline transition-standard">Mathematics</a></li>
+                        <li><a href="#services" class="text-white/70 hover:text-white hover:underline transition-standard">Science</a></li>
+                        <li><a href="#services" class="text-white/70 hover:text-white hover:underline transition-standard">SATs Preparation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-accent font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-white/70">
+                            <i class="fas fa-envelope text-accent mr-3"></i>
+                            <a href="mailto:info@educerelearning.com" class="hover:text-white transition-standard">info@educerelearning.com</a>
+                        </li>
+                        <li class="flex items-center text-white/70">
+                            <i class="fas fa-map-marker-alt text-accent mr-3"></i>
+                            <span>Langley, Berkshire, UK</span>
+                        </li>
+                    </ul>
+                    <!-- Social media links removed -->
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center text-white/50 text-sm">
+                <p>&copy; 2025 Educere Learning. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // If mobile menu is open, close it
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Add shadow to header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+        
+        // FAQ Accordion Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const item = toggle.closest('.faq-item');
+                    const content = item.querySelector('.faq-content');
+                    const icon = item.querySelector('.faq-icon');
+                    
+                    // Toggle the current item
+                    content.classList.toggle('hidden');
+                    
+                    // Rotate icon
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+    </script>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/447405795320?text=Hi%2C%20I'm%20interested%20in%20tutoring%20services%20for%20my%20child." class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span class="whatsapp-float-tooltip">Contact us on WhatsApp</span>
+    </a>
+    
+    <!-- Cookie Consent JavaScript -->
+    <script>
+        // Cookie consent management
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieConsent = document.getElementById('cookie-consent');
+            const acceptButton = document.getElementById('cookie-accept');
+            const declineButton = document.getElementById('cookie-decline');
+            
+            // Check if user has already made a choice
+            const cookieChoiceMade = localStorage.getItem('cookieConsent');
+            
+            if (!cookieChoiceMade) {
+                // Show the banner if no choice has been made
+                cookieConsent.classList.remove('hidden');
+            }
+            
+            // Handle accept
+            acceptButton.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                cookieConsent.classList.add('hidden');
+                // Here you would normally initialize analytics cookies
+                console.log('Cookies accepted');
+            });
+            
+            // Handle decline
+            declineButton.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'declined');
+                cookieConsent.classList.add('hidden');
+                // Here you would make sure no non-essential cookies are set
+                console.log('Cookies declined');
+            });
+        });
+    </script>
+</body>
+</html>
+

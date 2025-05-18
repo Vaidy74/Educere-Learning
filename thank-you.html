@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Educere Learning</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="tailwind.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af', // Deep blue
+                        secondary: '#1e3a8a', // Darker blue
+                        accent: '#fcd34d', // Yellow
+                        dark: '#1f2937', // Dark gray
+                        light: '#f3f4f6', // Light gray
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .transition-standard {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-light">
+    <!-- Header - Clean and modern with shadow -->
+    <header class="fixed w-full z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="modern-design.html" class="flex items-center space-x-2">
+                    <img src="images/educere-learning-logo.svg" alt="Educere Learning" class="h-20 -my-2">
+                    <span class="text-primary font-display text-2xl font-bold">Educere Learning</span>
+                </a>
+                
+                <!-- Home Button -->
+                <a href="modern-design.html" class="px-4 py-2 bg-primary text-white rounded hover:bg-secondary transition-standard">
+                    <i class="fas fa-home mr-2"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Thank You Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <div class="bg-white p-10 rounded-xl shadow-md">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-check text-green-500 text-4xl"></i>
+                    </div>
+                    
+                    <h1 class="text-3xl md:text-4xl font-bold text-primary font-display mb-4">Thank You!</h1>
+                    
+                    <p class="text-xl text-dark/80 mb-8">
+                        Your message has been sent successfully. We'll be in touch soon!
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <p class="text-dark/70">
+                            We aim to respond to all inquiries within 24 hours during weekdays.
+                        </p>
+                        
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="modern-design.html" class="inline-flex items-center px-6 py-3 bg-primary text-white font-bold rounded-md hover:bg-secondary transition-standard">
+                                <i class="fas fa-arrow-left mr-2"></i> Return to Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer - Simple version -->
+    <footer class="bg-dark text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Educere Learning. All Rights Reserved.</p>
+            <p class="text-white/70 text-sm mt-2">Langley, Berkshire, UK</p>
+        </div>
+    </footer>
+</body>
+</html>
