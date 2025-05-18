@@ -688,7 +688,9 @@
         const mobileMenu = document.getElementById('mobile-menu');
         
         if (menuToggle && mobileMenu) {
+            console.log('Mobile menu system initialized');
             menuToggle.addEventListener('click', () => {
+                console.log('Menu button clicked');
                 mobileMenu.classList.toggle('hidden');
             });
         }
