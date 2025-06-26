@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.educerelearning.co.uk/sitemap.xml
+
+# Prevent crawling of admin or sensitive areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_internal/
+
+# Allow important pages
+Allow: /index.html
+Allow: /privacy-policy.html
+Allow: /contact.html
+Allow: /images/
