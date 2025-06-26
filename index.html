@@ -216,22 +216,48 @@
     </section>
 
     <!-- Credentials Strip -->
-
-
     <section class="py-6 bg-accent">
         <div class="container mx-auto px-4">
-            <div class="flex flex-wrap items-center justify-center gap-12 max-w-4xl mx-auto">
+            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 max-w-6xl mx-auto">
                 <!-- 10 Years Logo -->
                 <div class="flex items-center">
-                    <div class="h-16 w-auto">
-                        <img src="images/Credential-1.png" alt="10 Years Experience" class="h-full w-auto object-contain">
+                    <div class="h-16 w-auto cursor-pointer credential-image" data-image="images/Credential-1.png" data-title="10 Years Experience">
+                        <img src="images/Credential-1.png" alt="10 Years Experience" class="h-full w-auto object-contain hover:scale-105 transition-transform">
                     </div>
                 </div>
                 
                 <!-- Accreditation Logo -->
                 <div class="flex items-center">
-                    <div class="h-16 w-auto">
-                        <img src="images/Credential-2.png" alt="Official Accreditation" class="h-full w-auto object-contain">
+                    <div class="h-16 w-auto cursor-pointer credential-image" data-image="images/Credential-2.png" data-title="Official Accreditation">
+                        <img src="images/Credential-2.png" alt="Official Accreditation" class="h-full w-auto object-contain hover:scale-105 transition-transform">
+                    </div>
+                </div>
+
+                <!-- ELKLAN Certification -->
+                <div class="flex items-center">
+                    <div class="h-16 w-auto cursor-pointer credential-image" data-image="images/elklan.png" data-title="ELKLAN Certified">
+                        <img src="images/elklan.png" alt="ELKLAN Certified" class="h-full w-auto object-contain hover:scale-105 transition-transform">
+                    </div>
+                </div>
+
+                <!-- DBS Check -->
+                <div class="flex items-center">
+                    <div class="h-16 w-auto cursor-pointer credential-image" data-image="images/dbs.png" data-title="DBS Checked">
+                        <img src="images/dbs.png" alt="DBS Checked" class="h-full w-auto object-contain hover:scale-105 transition-transform">
+                    </div>
+                </div>
+
+                <!-- Safeguarding -->
+                <div class="flex items-center">
+                    <div class="h-16 w-auto cursor-pointer credential-image" data-image="images/safeguarding.png" data-title="Safeguarding Trained">
+                        <img src="images/safeguarding.png" alt="Safeguarding Trained" class="h-full w-auto object-contain hover:scale-105 transition-transform">
+                    </div>
+                </div>
+
+                <!-- Stonebridge -->
+                <div class="flex items-center">
+                    <div class="h-16 w-auto cursor-pointer credential-image" data-image="images/stonebridge.png" data-title="Stonebridge Associated">
+                        <img src="images/stonebridge.png" alt="Stonebridge Associated" class="h-full w-auto object-contain hover:scale-105 transition-transform">
                     </div>
                 </div>
             </div>
@@ -765,6 +791,49 @@
                     icon.classList.toggle('rotate-180');
                 });
             });
+
+            // Credential Image Modal Functionality
+            const credentialImages = document.querySelectorAll('.credential-image');
+            const modal = document.getElementById('credential-modal');
+            const modalImage = document.getElementById('modal-image');
+            const modalTitle = document.getElementById('modal-title');
+            const closeModal = document.getElementById('close-modal');
+
+            // Open modal when credential image is clicked
+            credentialImages.forEach(credential => {
+                credential.addEventListener('click', () => {
+                    const imageUrl = credential.getAttribute('data-image');
+                    const title = credential.getAttribute('data-title');
+                    
+                    modalImage.src = imageUrl;
+                    modalImage.alt = title;
+                    modalTitle.textContent = title;
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                });
+            });
+
+            // Close modal when close button is clicked
+            closeModal.addEventListener('click', () => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            });
+
+            // Close modal when clicking outside the modal content
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto'; // Restore scrolling
+                }
+            });
+
+            // Close modal when pressing Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto'; // Restore scrolling
+                }
+            });
         });
     </script>
     <!-- Floating WhatsApp Button -->
@@ -772,6 +841,22 @@
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
         <span class="whatsapp-float-tooltip">Contact us on WhatsApp</span>
     </a>
+
+    <!-- Credential Image Modal -->
+    <div id="credential-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="max-w-4xl max-h-screen p-4 relative">
+            <!-- Close Button -->
+            <button id="close-modal" class="absolute top-2 right-2 bg-white text-dark rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-200 transition-standard z-10">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            
+            <!-- Modal Content -->
+            <div class="bg-white rounded-lg p-4 max-h-full overflow-auto">
+                <h3 id="modal-title" class="text-xl font-bold text-primary mb-4 text-center"></h3>
+                <img id="modal-image" src="" alt="" class="max-w-full max-h-96 mx-auto object-contain">
+            </div>
+        </div>
+    </div>
     
     <!-- Cookie Consent JavaScript -->
     <script>
