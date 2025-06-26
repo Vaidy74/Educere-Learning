@@ -54,6 +54,9 @@
     
     <title>Primary Tutor Langley SL3 | Tutors Near Me & Online Tutors | Educere Learning</title>
     
+    <!-- Consent Management Platform (GDPR Compliance) -->
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/9f78f4d6d2e25.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
+    
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -787,7 +790,7 @@
             </div>
             
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard cursor-pointer" onclick="trackServiceInterest('Phonics')">
                     <div class="w-14 h-14 bg-primary text-white rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-book-open text-xl"></i>
                     </div>
@@ -798,7 +801,7 @@
                     </div>
                 </div>
                 
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard cursor-pointer" onclick="trackServiceInterest('English')">
                     <div class="w-14 h-14 bg-primary text-white rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-pencil-alt text-xl"></i>
                     </div>
@@ -809,7 +812,7 @@
                     </div>
                 </div>
                 
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard cursor-pointer" onclick="trackServiceInterest('Mathematics')">
                     <div class="w-14 h-14 bg-primary text-white rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-calculator text-xl"></i>
                     </div>
@@ -820,7 +823,7 @@
                     </div>
                 </div>
                 
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-standard cursor-pointer" onclick="trackServiceInterest('Science')">
                     <div class="w-14 h-14 bg-primary text-white rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-flask text-xl"></i>
                     </div>
@@ -1066,9 +1069,9 @@
                     Contact us today and take the first step toward unlocking your child's potential.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <div class="inline-flex items-center px-8 py-4 bg-white text-primary font-bold text-lg rounded-full">
+                    <a href="tel:+447424599949" class="inline-flex items-center px-8 py-4 bg-white text-primary font-bold text-lg rounded-full hover:bg-gray-50 transition-standard">
                         <i class="fas fa-phone mr-2 text-xl"></i> Call us: 07424599949
-                    </div>
+                    </a>
                     <!-- WhatsApp button temporarily hidden -->
                     <!--
                     <a href="https://wa.me/447424599949?text=Hi%2C%20I'm%20interested%20in%20tutoring%20services%20for%20my%20child." target="_blank" class="inline-flex items-center px-8 py-4 bg-[#25d366] text-white font-bold text-lg rounded-full hover:bg-[#128C7E] transition-standard">
@@ -1366,7 +1369,6 @@ Sent from Educere Learning Contact Form
                     });
 
                     if (response.ok) {
-                        // Success
                         formSuccess.classList.remove('hidden');
                         contactForm.reset();
                         
@@ -1518,9 +1520,6 @@ ${data.message}
                         Cancel
                     </button>
                 </div>
-            </div>
-        </div>
-    </div>
             </div>
         </div>
     </div>
