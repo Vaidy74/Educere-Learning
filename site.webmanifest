@@ -1,16 +1,22 @@
 {
-    "name": "Educere Learning",
-    "short_name": "Educere",
+    "name": "Educere Learning - Primary School Tutoring",
+    "short_name": "Educere Learning",
     "description": "Primary school tutoring in Berkshire for children aged 4-11",
     "icons": [
         {
-            "src": "images/educerelog.svg",
-            "sizes": "any",
-            "type": "image/svg+xml"
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ],
     "theme_color": "#2C2B6C",
     "background_color": "#F9F5EC",
-    "display": "browser",
-    "start_url": "/"
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/"
 }
