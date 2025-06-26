@@ -1,21 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
   <url>
     <loc>https://www.educerelearning.co.uk/</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.educerelearning.co.uk/images/Happy-Learning.png</image:loc>
+      <image:title>Primary School Tutoring in Langley SL3</image:title>
+      <image:caption>Expert primary school tutoring for children aged 4-11 in Langley SL3, Berkshire</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.educerelearning.co.uk/images/educerelog.svg</image:loc>
+      <image:title>Educere Learning Logo</image:title>
+      <image:caption>Educere Learning - Primary school tutoring in Berkshire</image:caption>
+    </image:image>
   </url>
+  
+  <!-- Services Section (as fragments) -->
+  <url>
+    <loc>https://www.educerelearning.co.uk/#services</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- About Section -->
+  <url>
+    <loc>https://www.educerelearning.co.uk/#about</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.educerelearning.co.uk/images/Founder.png</image:loc>
+      <image:title>Sunitha - Founder of Educere Learning</image:title>
+      <image:caption>Experienced primary school tutor and founder of Educere Learning</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- FAQ Section -->
+  <url>
+    <loc>https://www.educerelearning.co.uk/#faq</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contact Section -->
+  <url>
+    <loc>https://www.educerelearning.co.uk/#contact</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Credentials Section -->
+  <url>
+    <loc>https://www.educerelearning.co.uk/#credentials</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://www.educerelearning.co.uk/images/dbs.png</image:loc>
+      <image:title>DBS Check Certificate</image:title>
+      <image:caption>DBS checked tutors for child safety</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.educerelearning.co.uk/images/elklan.png</image:loc>
+      <image:title>Elklan Training Certificate</image:title>
+      <image:caption>Speech and language support training</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Static Pages -->
   <url>
     <loc>https://www.educerelearning.co.uk/privacy-policy.html</loc>
     <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  
   <url>
     <loc>https://www.educerelearning.co.uk/contact.html</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
 </urlset>

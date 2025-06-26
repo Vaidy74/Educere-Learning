@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+# Enhanced robots.txt for primary school tutoring in Langley SL3, Berkshire
+# Educere Learning - Primary School Tutoring Services
+
 # Sitemap location
 Sitemap: https://www.educerelearning.co.uk/sitemap.xml
 
@@ -8,9 +11,24 @@ Sitemap: https://www.educerelearning.co.uk/sitemap.xml
 Disallow: /admin/
 Disallow: /private/
 Disallow: /_internal/
+Disallow: /*.tmp
+Disallow: /*backup*
 
-# Allow important pages
+# Allow important pages and directories
 Allow: /index.html
 Allow: /privacy-policy.html
 Allow: /contact.html
 Allow: /images/
+Allow: /favicon.ico
+Allow: /site.webmanifest
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.svg
+Allow: /*.css
+Allow: /*.js
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Host preference (optional)
+Host: https://www.educerelearning.co.uk
