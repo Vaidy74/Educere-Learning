@@ -53,6 +53,31 @@
     <link rel="shortcut icon" href="favicon.ico">
     
     <title>Primary Tutor Langley SL3 | Tutors Near Me & Online Tutors | Educere Learning</title>
+
+    <!-- Adjusted letter spacing for visual harmony -->
+    <style>
+      h1, .font-display {
+        letter-spacing: 0.01em; /* Slightly wide for display headings */
+      }
+      h2, h3, h4, .font-bold {
+        letter-spacing: 0.005em; /* Subtle, natural for subheadings */
+      }
+      body, p, li, .text-dark, .text-primary {
+        letter-spacing: 0em; /* Default, natural for body text */
+      }
+      .btn, button, .font-semibold {
+        letter-spacing: 0.02em; /* Slightly wider for buttons for clarity */
+      }
+      .tracking-tight {
+        letter-spacing: -0.01em !important;
+      }
+      .tracking-normal {
+        letter-spacing: 0em !important;
+      }
+      .tracking-wide {
+        letter-spacing: 0.025em !important;
+      }
+    </style>
     
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -168,7 +193,7 @@
         "https://www.educerelearning.co.uk/images/Founder.png",
         "https://www.educerelearning.co.uk/images/educerelog.svg"
       ],
-      "telephone": "+447424599949",
+      "telephone": "+447417508293",
       "email": "info@educerelearning.co.uk",
       "address": {
         "@type": "PostalAddress",
@@ -458,7 +483,7 @@
       "logo": "https://www.educerelearning.co.uk/images/educerelog.svg",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+447424599949",
+        "telephone": "+447417508293",
         "contactType": "customer service",
         "areaServed": "GB",
         "availableLanguage": "English"
@@ -612,7 +637,10 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2 space-y-6">
-                    <h1 class="text-4xl md:text-5xl font-bold font-display leading-tight">
+                    <div class="mt-2 mb-4 inline-flex items-center justify-center">
+                        <img src="images/Credential-2.png" alt="Qualified Tutor Accreditation Credential" class="h-12 md:h-16 w-auto object-contain shadow-lg rounded-lg bg-white p-1" />
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-bold font-display leading-tight">
                         Unlock Your Child's Potential
                     </h1>
                     <p class="text-lg md:text-xl opacity-90">
@@ -648,13 +676,6 @@
                 <div class="flex items-center">
                     <div class="h-16 w-auto cursor-pointer credential-image" data-image="images/Credential-1.png" data-title="10 Years Experience">
                         <img src="images/Credential-1.png" alt="10 Years Experience" class="h-full w-auto object-contain hover:scale-105 transition-transform">
-                    </div>
-                </div>
-                
-                <!-- Accreditation Logo -->
-                <div class="flex items-center">
-                    <div class="h-16 w-auto cursor-pointer credential-image" data-image="images/Credential-2.png" data-title="Official Accreditation">
-                        <img src="images/Credential-2.png" alt="Official Accreditation" class="h-full w-auto object-contain hover:scale-105 transition-transform">
                     </div>
                 </div>
 
@@ -762,11 +783,14 @@
                             </div>
                             <!-- Text Content -->
                             <div class="flex-1">
-                                <p class="text-dark/80 mb-4 text-justify">
-                                    Educere Learning began with one simple insight: recognising the important role parents' empathy plays in supporting their children's education. After over 15 years in the banking industry, I wanted to explore teaching—a fulfilling profession close to my heart. As a mother of two and someone who truly believes every child learns differently, I discovered my passion for education through hands-on teaching opportunities in schools, serving as a primary school governor, and working as an event manager for the 11+ mock exams.
-                                </p>
                                 <p class="text-dark/80 text-justify">
-                                    I developed my own approach by applying kinaesthetic learning and deeply personalised plans that honour each child's unique learning style, and I watched children flourish with this method. What started as my personal calling has grown into something bigger, but our philosophy remains the same—we don't just teach subjects, we nurture confidence and help children fall in love with learning. <strong class="text-primary">At Educere Learning, every child is seen, supported, and celebrated for exactly who they are.</strong>
+                                    Educere Learning was founded on a simple but powerful insight: recognising the crucial role parents' empathy plays in their children's educational success. As a qualified tutor with over 15 years of professional experience, I transitioned from banking to pursue my true passion—teaching. As a mother of two who firmly believes every child learns differently, I immersed myself in education through hands-on school experiences, serving as a primary school governor, and managing 11+ mock exams.
+                                </p>
+                                <p class="text-dark/80 text-justify mt-4">
+                                    These diverse roles revealed how traditional approaches often miss each child's unique potential. I developed a specialised methodology combining kinesthetic learning with deeply personalised plans that honour how each child naturally absorbs information. Watching previously struggling students transform into confident learners confirmed what I'd always believed: when we adapt our teaching to the child rather than expecting the child to adapt to us, remarkable things happen.
+                                </p>
+                                <p class="text-dark/80 text-justify mt-4">
+                                    What began as my personal calling has evolved into Educere Learning, where our philosophy remains unchanged—we don't just teach subjects, we nurture confidence and help children rediscover their love of learning. Every child is seen, supported, and celebrated for exactly who they are.
                                 </p>
                             </div>
                         </div>
@@ -908,9 +932,6 @@
                 <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
                     <button class="w-full text-left p-5 flex justify-between items-center faq-toggle">
                         <h3 class="text-lg font-bold text-primary">What age groups do you tutor?</h3>
-                        <svg class="w-5 h-5 text-primary transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
                     </button>
                     <div class="px-5 pb-5 faq-content hidden">
                         <p class="text-dark/80">
@@ -1066,15 +1087,12 @@
                     Contact us today and take the first step toward unlocking your child's potential.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="tel:+447424599949" class="inline-flex items-center px-8 py-4 bg-white text-primary font-bold text-lg rounded-full hover:bg-gray-50 transition-standard">
-                        <i class="fas fa-phone mr-2 text-xl"></i> Call us: 07424599949
+                    <a href="tel:+447417508293" class="inline-flex items-center px-8 py-4 bg-white text-primary font-bold text-lg rounded-full hover:bg-gray-50 transition-standard">
+                        <i class="fas fa-phone mr-2 text-xl"></i> Call us: 07417508293
                     </a>
-                    <!-- WhatsApp button temporarily hidden -->
-                    <!--
-                    <a href="https://wa.me/447424599949?text=Hi%2C%20I'm%20interested%20in%20tutoring%20services%20for%20my%20child." target="_blank" class="inline-flex items-center px-8 py-4 bg-[#25d366] text-white font-bold text-lg rounded-full hover:bg-[#128C7E] transition-standard">
+                    <a href="https://wa.me/447417508293?text=Hi%2C%20I'm%20interested%20in%20tutoring%20services%20for%20my%20child." target="_blank" class="inline-flex items-center px-8 py-4 bg-[#25d366] text-white font-bold text-lg rounded-full hover:bg-[#128C7E] transition-standard">
                         <i class="fab fa-whatsapp mr-2 text-xl"></i> Contact us on WhatsApp
                     </a>
-                    -->
                     <button id="email-contact-btn" class="inline-flex items-center px-8 py-4 bg-secondary text-white font-bold text-lg rounded-full hover:bg-white hover:text-primary transition-standard">
                         <i class="fas fa-envelope mr-2 text-xl"></i> Email us
                     </button>
@@ -1127,6 +1145,10 @@
                         <li class="flex items-center text-white/70">
                             <i class="fas fa-map-marker-alt text-accent mr-3"></i>
                             <span>Langley SL3, Berkshire, UK</span>
+                        </li>
+                        <li class="flex items-center text-white/70">
+                            <i class="fas fa-phone text-accent mr-3"></i>
+                            <span>07417508293</span>
                         </li>
                     </ul>
                     <!-- Social media links removed -->
@@ -1396,31 +1418,24 @@ ${data.message}
                     // Show success message since we're using mailto fallback
                     formSuccess.classList.remove('hidden');
                     contactForm.reset();
-                    
+
                     // Auto-close modal after 2 seconds
                     setTimeout(() => {
                         contactModal.classList.add('hidden');
                         document.body.style.overflow = 'auto';
                     }, 2000);
-                }
-
                 // Reset button state
                 submitBtn.disabled = false;
                 submitText.textContent = 'Send Message';
                 submitSpinner.classList.add('hidden');
-            });
+            }
         });
+    });
     </script>
     <!-- Floating WhatsApp Button - Temporarily Hidden -->
     <!--
     <a href="https://wa.me/447424599949?text=Hi%2C%20I'm%20interested%20in%20tutoring%20services%20for%20my%20child." class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-        <span class="whatsapp-float-tooltip">Contact us on WhatsApp</span>
-    </a>
-    -->
-
-    <!-- Credential Image Modal -->
-    <div id="credential-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>ck bg-opacity-75 flex items-center justify-center z-50 hidden">
         <div class="max-w-4xl max-h-screen p-4 relative">
             <!-- Close Button -->
             <button id="close-modal" class="absolute top-2 right-2 bg-white text-dark rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-200 transition-standard z-10">
